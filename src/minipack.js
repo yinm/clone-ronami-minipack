@@ -41,7 +41,7 @@ function createGraph(entry) {
 
   for (const asset of queue) {
     asset.mapping = {}
-    const dirname = path.dirname(assert.filename)
+    const dirname = path.dirname(asset.filename)
 
     asset.dependencies.forEach(relativePath => {
       const absolutePath = path.join(dirname, relativePath)
